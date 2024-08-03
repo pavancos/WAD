@@ -7,3 +7,15 @@ function showDate() {
     today = mm + '/' + dd + '/' + yyyy;
     document.getElementById("date").innerHTML=today;
 }
+
+function fact(n){
+    if(n==0){
+        return 1;
+    }
+    return n*fact(n-1);
+}
+
+function factorial(){
+    let n = prompt("Enter a number to find factorial:")
+    alert("Factorial of "+n+" is "+fact(n));
+}
