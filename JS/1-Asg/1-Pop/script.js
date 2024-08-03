@@ -36,3 +36,13 @@ function showTable() {
         + n + " x 10 = " + n * 10
     )
 }
+
+function sumOfN(){
+    let sum=0;
+    let ele=true;
+    for(;ele;ele=confirm("Do you want to add more numbers" )){
+        let n = prompt("Enter the number:")
+        sum+=parseInt(n);
+    }
+    alert("Sum of all numbers is: "+sum);
+}
