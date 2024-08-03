@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-Country Capital</title>
+    <style>
+        body{
+            background-color: black;
+            color: burlywood;
+        }
+        h2{
+            color: burlywood;
+        }
+        p{
+            padding: 5px;
+            color: burlywood;
+            border-radius: 20px;
+            background-color: darkslategray;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Select the country name to find its capital</h2>
+    <select name="Country" id="country">
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+    </select>
+    <h2>
+        Capital:
+    </h2>
+    <p id="capital">
+
+    </p>
+    <script>
+        let country = document.getElementById('country');
+        let capital = document.getElementById('capital');
+        country.addEventListener('change', function(){
+            let selectedCountry = country.value;
+            switch(selectedCountry){
+                case 'india':
+                    capital.innerHTML = 'New Delhi';
+                    break;
+                case 'usa':
+                    capital.innerHTML = 'Washington DC';
+                    break;
+                case 'uk':
+                    capital.innerHTML = 'London';
+                    break;
+                case 'australia':
+                    capital.innerHTML = 'Canberra';
+                    break;
+                case 'canada':
+                    capital.innerHTML = 'Ottawa';
+                    break;
+            }
+        });
+
+    </script>
+
+</body>
+</html>
